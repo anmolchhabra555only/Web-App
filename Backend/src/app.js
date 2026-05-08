@@ -113,7 +113,7 @@ app.post("/login", async (req, res) => {
       return res.status(400).json({ message: "Wrong password" });
     }
 
-    const token = jwt.sign({ id: user._id }, "secretkey");
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
 
     res.status(200).json({
       message: "Login successful",

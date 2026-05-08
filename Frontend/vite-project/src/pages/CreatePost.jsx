@@ -12,17 +12,19 @@ const CreatePost = () => {
 
     const formData = new FormData(e.target)
 
-    axios.post("http://localhost:3000/create-post", formData)
-    .then((res)=>{
+    try{  
+    const res = await axios.post("https://web-app-4yko.onrender.com/create-post", formData);
+    
+    console.log(res.data);
 
       navigate("/feed")
 
-    })
-    .catch((err)=> {
+    }
+    catch(err) {
       console.log(err);
       alert("Error Creatig Post")
-    })
-  }
+    }
+  };
 
   return (
     <section className='create-post-section'>
@@ -30,7 +32,7 @@ const CreatePost = () => {
       <h1>Create Post</h1>
 
       <form onSubmit={handleSubmit}>
-        <input type="file" name="image" accept="image/*" />
+      <input type="file" name="image" accept="image/*" required />
         
         <input 
         type="text" 

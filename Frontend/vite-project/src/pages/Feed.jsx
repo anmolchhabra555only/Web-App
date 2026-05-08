@@ -26,7 +26,7 @@ const Feed = () => {
       return;
     }
 
-    axios.get("http://localhost:3000/posts")
+    axios.get("https://web-app-4yko.onrender.com/posts")
     .then((res)=>{
       
       setPosts(res.data.posts)
@@ -38,7 +38,7 @@ const Feed = () => {
   const handleDelete = async () => {
     
     try{
-      await axios.delete(`http://localhost:3000/delete-post/${selectedId}`);
+      await axios.delete(`https://web-app-4yko.onrender.com/delete-post/${selectedId}`);
       setPosts((prev) => prev.filter((p) => p._id !== selectedId));
       setShowModal(false)
     }catch (error){

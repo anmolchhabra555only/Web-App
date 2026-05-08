@@ -11,7 +11,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post("http://localhost:3000/login", {
+      const res = await axios.post("https://web-app-4yko.onrender.com/login", {
         email: email.trim(),
         password: password.trim()
       });
