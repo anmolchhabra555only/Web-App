@@ -65,7 +65,7 @@ const Feed = () => {
           posts.map((post) => (
             <div key={post._id} className='post-card'>
               <img src={post.image} alt={post.caption} />
-              <p>{post.caption}</p>
+              <p className="caption">{post.caption}</p>
 
               <button 
               onClick={() => {

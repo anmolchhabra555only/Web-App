@@ -86,26 +86,35 @@ html{
   height: 100%;
   width: 100%;
   background-color: #f0f2f5;
-  padding: 20px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 .post-card{
   display: flex;
   flex-direction: column;
   gap: 10px;
   background-color: white;
-  padding: 20px;
+  padding: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 400px;
+  width: 100%;
   margin-bottom: 20px;
+  max-width: 500px;
+  margin: 20px auto;
+  box-sizing: border-box;
 }
 .post-card img{
-  max-width: 100%;
+  width: 100%;
+  height: auto;
   border-radius: 8px;
   margin-top: 10px;
 }
 .post-card h3{
   margin-bottom: 10px;
+}
+.caption{
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 .delete-btn{
   background-color: red !important;
