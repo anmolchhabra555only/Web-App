@@ -24,7 +24,7 @@ const Login = () => {
       navigate("/feed");
 
     } catch (error) {
-      console.log(error.response.data);
+      alert(error.response.data.message || "Login Failed");
     }
   };
 
